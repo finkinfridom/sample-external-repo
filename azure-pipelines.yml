@@ -25,6 +25,9 @@ variables:
 - name: workspace
   value: $(Pipeline.Workspace)
 steps:
+- checkout: self
+- checkout: tools
+- checkout: fcc
 - script: |
     echo sourcesDirectory: $(sourcesDirectory)
     echo workspace: $(workspace)
