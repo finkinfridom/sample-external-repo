@@ -13,7 +13,7 @@ resources:
  repositories:
   - repository: tools
     type: git
-    name: Shared Modules/Pipeline.Tools
+    name: Shared%20Modules/Pipeline.Tools
   - repository: fcc
     type: github
     endpoint: A-Digital-Solution
