@@ -26,7 +26,7 @@ variables:
   value: $(Pipeline.Workspace)
 steps:
 - checkout: self
-  path: $(sourcesDirectory)/self
+  path: $(sourcesDirectory)/me
 - checkout: tools
   path: $(sourcesDirectory)/t
 - checkout: fcc
