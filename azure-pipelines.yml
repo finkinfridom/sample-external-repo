@@ -30,5 +30,7 @@ steps:
 - checkout: fcc
 - script: |
     echo sourcesDirectory: $(sourcesDirectory)
+    ls -la $(sourcesDirectory)
     echo workspace: $(workspace)
+    ls -la $(workspace)
   displayName: 'echo variables'
