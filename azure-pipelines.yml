@@ -26,11 +26,11 @@ variables:
   value: $(Pipeline.Workspace)
 steps:
 - checkout: self
-  path: $(sourcesDirectory)/self
+  path: $(workspace)/me
 - checkout: tools
-  path: $(sourcesDirectory)/t
+  path: $(workspace)/t
 - checkout: fcc
-  path: $(sourcesDirectory)/f
+  path: $(workspace)/f
 - script: |
     echo sourcesDirectory: $(sourcesDirectory)
     ls -la $(sourcesDirectory)
