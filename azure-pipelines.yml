@@ -9,11 +9,13 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+- name: sourcesDirectory
+  value: $(Build.SourcesDirectory)
+- name: workspace
+  value: $(Pipeline.Workspace)
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    echo sourcesDirectory: $(sourcesDirectory)
+    echo workspace: $(workspace)
+  displayName: 'echo variables'
