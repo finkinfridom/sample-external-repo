@@ -9,12 +9,23 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+resources:
+ repositories:
+  - repository: tools
+    type: git
+    name: Shared Modules/Pipeline.Tools
+  - repository: fcc
+    type: github
+    endpoint: A-Digital-Solution
+    name: finkinfridom/food-cost-calculator
+
 variables:
 - name: sourcesDirectory
   value: $(Build.SourcesDirectory)
 - name: workspace
   value: $(Pipeline.Workspace)
 steps:
+- checkout: self
 - script: |
     echo sourcesDirectory: $(sourcesDirectory)
     echo workspace: $(workspace)
